@@ -57,21 +57,33 @@ Move into the `sourmash` folder and run the following commands to estimate the [
 
 ```
 # Estimate the ANI between samples
-sourmash compare *sig --ani --output ani.k31.compare --csv  ani.k31.compare.csv
+sourmash compare *sig --ani --output sourmash.ani.k31.compare --csv  sourmash.ani.k31.compare.csv
 # Create a very rough plot
 sourmash plot ani.k31.compare --vmin .7  #try adjusting the vim value to see what happens
 ```
+
+Copy `sourmash.ani.k31.compare.csv` and all your associated `.png` to `results`.
 
 **What do you observe? What is the ANI between Pro and your outgroup? What is the range in ANI between Pro strains? How accurate do you think this is?**
 
 > ANSWER HERE
 
-There are several tools that will estimate ANI for you including this [online GUI](https://gtdb.ecogenomic.org/tools/fastani?job-id=1).
+There are several tools that will estimate ANI for you including [fastani](https://github.com/ParBLiSS/FastANI). There is a nice [online GUI version of fastani here](https://gtdb.ecogenomic.org/tools/fastani?job-id=1).
 
-BONUS: Use a different tool (or the online GUI) to calculate the ANI for our genomes. Are the ANI's the same or different between your tool and the output from sourmash?
+Using fastani on the command line or with the online GUI, calculate the ANI for our genomes. Save the output of the fastani analysis as `fastani-ani.csv` in `results`.
+
+If you use the command line report your code here:
 
 ```
-CODE
+HERE
 ```
 
-## Part B. Rapid genome comparison using K-mers: Sourmash!
+If you used the GUI save a copy of the heatmap in your `results` folder.
+
+**Are fastani's estimated ANI values the same or different than those output by sourmash?  Why? Look at the values for Pro vs your other bacterial genomes.**
+
+> ANSWER HERE
+
+**BONUS** Create a scatter plot of sourmash pairwise ANI values compared to ANI values returned by the tool that you chose.
+
+## Part C. Comparing functional potential across genomes
