@@ -53,7 +53,7 @@ Take a look at your output.
 
 **How do the files sizes of the signature files compare to the original genome file sizes? What do you see reported in the .sig files?**
 
-> ANSWER
+> ANSWER HERE
 
 Now that we have created the signatures you can do all sorts of things like estimate taxonomy using their databases, query large datasets, or (as we are going to do) quickly compare a set of genomes.
 
@@ -126,7 +126,7 @@ CODE USED FOR HMM PROFILING
 
 Now it is time to look at your results. Generate a table where you predict for each strain the presence (and copy number) or absence of PhoA and PhoB. Do this both based on your BLAST results and your HMM results. Save the tables in your results folder as a csv file.
 
-**How did you make a decision for presence/absence based on the outputs from BLAST? HMM?**
+**How did you make a decision for predicting gene presence/absence based on the outputs from BLAST? What about HMM?**
 
 > ANSWER HERE
 
