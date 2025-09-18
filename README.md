@@ -124,7 +124,7 @@ Now, use the two hmm profiles that are provided to search for phoA and phoB. Aga
 CODE USED FOR HMM PROFILING
 ```
 
-Now it is time to look at your results. Generate a table where you predict for each strain the presence (and copy number) or absence of PhoA and PhoB. Do this both based on your BLAST results and your HMM results. Save the tables in your results folder as a csv file.
+Now it is time to look at your results. Generate a table where you predict for each strain the presence (and copy number) or absence of PhoA and PhoB. Do this both based on your BLAST results and your HMM results. Save the tables in your results folder as two csv or tab separated files (`phoA-presence.csv` and `phoB-presence.csv`).
 
 **How did you make a decision for predicting gene presence/absence based on the outputs from BLAST? What about HMM?**
 
@@ -135,4 +135,4 @@ Now it is time to look at your results. Generate a table where you predict for e
 > ANSWER HERE
 
 ## You are done!
-For this assignment please push the updated `README.md` file as well as your `results/` which should contain:
+For this assignment please push the updated `README.md` file as well as your `results/` which should contain your ANI matrices done with sourmash and fastani, all figures generated for the ANI calculations, the outputs of HMM and BLAST searches, the predicted presence and absence of the genes across the strains. 
