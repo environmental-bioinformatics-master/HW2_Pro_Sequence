@@ -20,7 +20,7 @@ This should reduce the number of genomes to ~71. We don't need that many so let'
 
 ![alt text](images/download.png)
 
-It is useful to have sequences from organisms other than the organism we are interested in. Repeat the process above and download 2 genomes from *Synechococcus* and one genome from *some other* bacteria. For these you should pull the same files (genome, proteins, GFF). Give the zipped files some sort of useful name.
+It is useful to have sequences from organisms other than the organism we are interested in. Repeat the process above and download the genomic information from *two other* bacteria (pick your favorites!). You should pull the same files (genome, proteins, GFF). Give the zipped files some sort of useful name.
 
 Next, use *scp* to transfer all your files to the HPC to a folder called `data` in your homework repository. Unzip all the folders and look at the contents.
 
@@ -33,6 +33,7 @@ Let's copy all the genome files into a new directory in data called `genomes_seq
 ```
 YOUR CODE HERE
 ```
+
 **Could you do this same operation for the protein files? Why or why not?**
 > ANSWER HERE
 
@@ -105,7 +106,7 @@ Check the names of your protein files-- they should have been renamed based on t
 
 In a folder called `phospohorus-genes`, you will find resources for two genes associated with phosphorus metabolism in bacteria: 1) **phoA**, an alkaline hhosphatase which cleaves phosphate off of phosphate esters, and 2) **phoB**, a transcriptional response regulator. For both of these genes I have provided the amino acid sequence for the proteins in *E. coli* (where these proteins were originally characterized and identified) as well as an hmm profile.
 
-First, use the provided amino acid sequences to query the protein files for phoA and phoB with blastp. (HINT: You are going to need to generate blast database and then run your searches for each strain. For loops might be useful here; you might also find [this](https://open.oregonstate.education/computationalbiology/chapter/command-line-blast/) useful and want to modify the default output format). Save each of your outputs to your `results` folder as ``[strain].[genename].blastp.out`
+First, use the provided amino acid sequences to query the protein files for phoA and phoB with blastp. (HINT: You are going to need to generate blast database and then run your searches for each strain. For loops might be useful here; you might also find [this](https://open.oregonstate.education/computationalbiology/chapter/command-line-blast/) useful and want to modify the default output format). Save each of your outputs to your `results` folder as `[strain].[genename].blastp.out`.
 
 **Insert your code below:**
 
@@ -113,4 +114,20 @@ First, use the provided amino acid sequences to query the protein files for phoA
 CODE USED FOR BLASTDB GENERATION + BLASTP
 ```
 
-Now, use the two hmm profiles to 
+Now, use the two hmm profiles that are provided to search for phoA and phoB. Again, you might want to consider outputting a table as well as the typical hmm output. Save each of your outputs to your `results` folder as `[strain].[genename].hmm.out`.
+
+**Insert your code below:**
+
+```
+CODE USED FOR HMM PROFILING
+```
+
+Now it is time to look at your results. Generate a table where you predict for each strain the presence (and copy number) or absence of PhoA and PhoB. Do this both based on your BLAST results and your HMM results. Save the tables in your results folder as a csv file.
+
+**How did you make a decision for presence/absence based on BLAST? HMM?**
+
+> ANSWER HERE
+
+**Are your predictions of gene presence/absence consistent between the two methods? Why or why not?**
+
+> ANSWER HERE
