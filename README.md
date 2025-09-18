@@ -11,6 +11,7 @@ mamba create -c bioconda -c conda-forge -n homework2 sourmash blast hmmer fastan
 ```
 
 ## Part A. Preliminary: Getting the data
+
 First, let's grab some genomes. Go to the genome browser from the NCBI: https://www.ncbi.nlm.nih.gov/datasets/genome/. This is a tool that allows you to look up genomes by taxonomy (a super useful tool). Search for *Prochlorococcus*. As you can see-- there are a *lot* of Pro genomes. Let's filter the results to only select for complete genomes (1 contig, and often circularized for bacteria) and exclude Metagenome-assembled genomes (MAGs) (these are useful but can be a bit messier or contaminated):
 
 ![alt text](images/genome-filter.png)
@@ -87,3 +88,29 @@ If you used the GUI save a copy of the heatmap in your `results` folder.
 **BONUS** Create a scatter plot of sourmash pairwise ANI values compared to ANI values returned by the tool that you chose.
 
 ## Part C. Comparing functional potential across genomes
+
+Now let's take a look at functional potential differences across our genomes. Navigate to the *Prochlorococcus* folder that contains your GCF folders. All the protein files are named `protein.faa`. Let's go ahead and change all the names to the strain name of the genomes. I have created a file (`resources/accession_to_strain.tsv`) that translates the genome file name to the strain name. Use the script below to change all the names. Update the path to the accession file and run the following for loop.
+
+```
+for x in $(cat /path/to/accession_to_strain.tsv);
+  do
+  gc=${x%;*};
+  s=${x#*;};
+  mv $gc/protein.faa
+  $gc/$s.protein.faa;
+  done
+```
+
+Check the names of your protein files-- they should have been renamed based on the strain name for the organism. Make a new folder called `proteins` and link all your protein files into that folder.
+
+In a folder called `phospohorus-genes`, you will find resources for two genes associated with phosphorus metabolism in bacteria: 1) **phoA**, an alkaline hhosphatase which cleaves phosphate off of phosphate esters, and 2) **phoB**, a transcriptional response regulator. For both of these genes I have provided the amino acid sequence for the proteins in *E. coli* (where these proteins were originally characterized and identified) as well as an hmm profile.
+
+First, use the provided amino acid sequences to query the protein files for phoA and phoB with blastp. (HINT: You are going to need to generate blast database and then run your searches for each strain. For loops might be useful here; you might also find [this](https://open.oregonstate.education/computationalbiology/chapter/command-line-blast/) useful and want to modify the default output format). Save each of your outputs to your `results` folder as ``[strain].[genename].blastp.out`
+
+**Insert your code below:**
+
+```
+CODE USED FOR BLASTDB GENERATION + BLASTP
+```
+
+Now, use the two hmm profiles to 
