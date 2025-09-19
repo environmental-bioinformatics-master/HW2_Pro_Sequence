@@ -134,4 +134,4 @@ Now it is time to look at your results. Generate a table where you predict for e
 > ANSWER HERE
 
 ## You are done!
-For this assignment please push the updated `README.md` file as well as your `results/` which should contain your ANI matrices done with sourmash and fastani, all figures generated for the ANI calculations, the outputs of HMM and BLAST searches, the predicted presence and absence of the genes across the strains. 
+For this assignment please push the updated `README.md` file as well as your `results/` which should contain your ANI matrices done with sourmash and fastani, all figures generated for the ANI calculations, the outputs of HMM and BLAST searches, the predicted presence and absence of the genes across the strains. Finally, report how long this assignment took you. 
