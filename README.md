@@ -123,15 +123,17 @@ Now, use the two hmm profiles that are provided to search for phoA and phoB. Aga
 CODE USED FOR HMM PROFILING
 ```
 
-Now it is time to look at your results. Generate a table where you predict for each strain the presence (and copy number) or absence of PhoA and PhoB. Do this both based on your BLAST results and your HMM results. Save the tables in your results folder as two csv or tab separated files (`phoA-presence.csv` and `phoB-presence.csv`).
+Now it is time to look at your results. Generate a table where you predict for each strain the presence (and copy number) or absence of PhoA and PhoB. Do this both based on your BLAST results and your HMM results. Save the tables in your results folder as two csv or tab separated files (`phoA-presence.csv` and `phoB-presence.csv`). 
 
 **How did you make a decision for predicting gene presence/absence based on the outputs from BLAST? What about HMM?**
 
 > ANSWER HERE
 
-**Are your predictions of gene presence/absence consistent between the two methods? Why or why not? What does this tell you about the two methods and how and where each might be best applied?**
+**Are your predictions of gene presence/absence consistent between the two methods (same estimated number of genes? same predicted proteins?)? Why or why not? What does this tell you about the two methods and how and where each might be best applied?**
 
 > ANSWER HERE
+
+You may have noticed as you were looking at the results of your homology searches that the fasta headers of the proteins included annotation information in some information. Take a look at the protein annotation information for predicted phoA and phoB genes from your searches for one of the strains in the .gff files. Does this align with the predictions you have made? 
 
 ## You are done!
 For this assignment please push the updated `README.md` file as well as your `results/` which should contain your ANI matrices done with sourmash and fastani, all figures generated for the ANI calculations, the outputs of HMM and BLAST searches, the predicted presence and absence of the genes across the strains. Finally, report how long this assignment took you. 
