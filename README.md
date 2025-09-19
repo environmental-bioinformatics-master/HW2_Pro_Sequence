@@ -7,7 +7,7 @@ In this assignment, you will explore the diversity of *Prochlorococcus* by compa
 First of all, start an `srun` session on the HPC. You shouldn't need a huge amount of memory (20Gb will more than suffice). Next, make a conda environment that has the tools we will be using:
 
 ```
-mamba create -c bioconda -c conda-forge -n homework2 sourmash blast hmmer fastani jupyterlab matplotlib seaborn pandas mummer
+mamba create -c bioconda -c conda-forge -n homework2 sourmash>=4.0 blast hmmer fastani jupyterlab matplotlib seaborn pandas mummer
 ```
 
 ## Part A. Preliminary: Getting genomic data from NCBI
@@ -22,7 +22,7 @@ This should reduce the number of genomes to ~71. We don't need that many so let'
 
 It is useful to have sequences from organisms other than the organism we are interested in. Repeat the process above and download the genomic information from *two other* bacteria (pick your favorites!). You should pull the same files (genome, proteins, GFF). Give the zipped files some sort of useful name.
 
-Next, use *scp* to transfer all your files to the HPC to a folder called `data` in your homework repository. Unzip all the folders and look at the contents.
+Next, use *scp* to transfer all your files to the HPC to a folder called `data/` in your homework repository. Unzip all the folders and look at the contents.
 
 **How are the data structured?**
 > ANSWER HERE
@@ -57,7 +57,7 @@ Take a look at your output.
 
 Now that we have created the signatures you can do all sorts of things like estimate taxonomy using their databases, query large datasets, or (as we are going to do) quickly compare a set of genomes.
 
-Move into the `sourmash` folder and run the following commands to estimate the [Average Nucleotide Identity (ANI)]() between each genome:
+Move into the `sourmash/` folder and run the following commands to estimate the [Average Nucleotide Identity (ANI)]() between each genome:
 
 ```
 # Estimate the ANI between samples
@@ -103,9 +103,9 @@ for x in $(cat /path/to/accession_to_strain.tsv); #loop through file
   done
 ```
 
-Check the names of your protein files-- they should have been renamed based on the strain name for the organism. Make a new folder called `proteins` and link all your protein files into that folder.
+Check the names of your protein files-- they should have been renamed based on the strain name for the organism. Make a new folder called `proteins/` and link all your protein files into that folder.
 
-In a folder called `phospohorus-genes`, you will find resources for two genes associated with phosphorus metabolism in bacteria: 1) **phoA**, an alkaline hhosphatase which cleaves phosphate off of phosphate esters, and 2) **phoB**, a transcriptional response regulator. For both of these genes I have provided the amino acid sequence for the proteins in *E. coli* (where these proteins were originally characterized and identified) as well as an hmm profile.
+In a folder called `phosphorus-genes`, you will find resources for two genes associated with phosphorus metabolism in bacteria: 1) **phoA**, an alkaline hhosphatase which cleaves phosphate off of phosphate esters, and 2) **phoB**, a transcriptional response regulator. For both of these genes I have provided the amino acid sequence for the proteins in *E. coli* (where these proteins were originally characterized and identified) as well as an hmm profile.
 
 First, use the provided amino acid sequences to query the protein files for phoA and phoB with blastp. (HINT: You are going to need to generate blast database and then run your searches for each strain. For loops might be useful here; you might also find [this](https://open.oregonstate.education/computationalbiology/chapter/command-line-blast/) useful and want to modify the default output format). Save each of your outputs to your `results` folder as `[strain].[gene].blastp.out`.
 
