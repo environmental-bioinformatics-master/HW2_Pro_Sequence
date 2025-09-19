@@ -95,12 +95,11 @@ If you used the GUI save a copy of the heatmap in your `results/` folder.
 Now let's take a look at functional potential differences across our genomes. Navigate to the *Prochlorococcus* folder that contains your GCF folders. All the protein files are named `protein.faa`. Let's go ahead and change all the names to the strain name of the genomes. I have created a file (`resources/accession_to_strain.tsv`) that translates the genome file name to the strain name. Use the script below to change all the names. Update the path to the accession file and run the following for loop.
 
 ```
-for x in $(cat /path/to/accession_to_strain.tsv);
+for x in $(cat /path/to/accession_to_strain.tsv); #loop through file
   do
-  gc=${x%;*};
-  s=${x#*;};
-  mv $gc/protein.faa
-  $gc/$s.protein.faa;
+  gc=${x%;*}; #get GCF/A number
+  s=${x#*;}; #get strain name
+  mv $gc/protein.faa $gc/$s.protein.faa; #rename the file
   done
 ```
 
