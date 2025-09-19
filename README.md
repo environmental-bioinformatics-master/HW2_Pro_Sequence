@@ -105,7 +105,7 @@ for x in $(cat /path/to/accession_to_strain.tsv); #loop through file
 
 Check the names of your protein files-- they should have been renamed based on the strain name for the organism. Make a new folder called `proteins/` and link all your protein files into that folder.
 
-In a folder called `phosphorus-genes`, you will find resources for two genes associated with phosphorus metabolism in bacteria: 1) **phoA**, an alkaline hhosphatase which cleaves phosphate off of phosphate esters, and 2) **phoB**, a transcriptional response regulator. For both of these genes I have provided the amino acid sequence for the proteins in *E. coli* (where these proteins were originally characterized and identified) as well as an hmm profile.
+In a folder called `phosphorus-genes`, you will find resources for two genes associated with phosphorus metabolism in bacteria: 1) **phoA**, an alkaline phosphatase which cleaves phosphate off of phosphate esters, and 2) **phoB**, a transcriptional response regulator. For both of these genes I have provided the amino acid sequence for the proteins in *E. coli* (where these proteins were originally characterized and identified) as well as an hmm profile.
 
 First, use the provided amino acid sequences to query the protein files for phoA and phoB with blastp. (HINT: You are going to need to generate blast database and then run your searches for each strain. For loops might be useful here; you might also find [this](https://open.oregonstate.education/computationalbiology/chapter/command-line-blast/) useful and want to modify the default output format). Save each of your outputs to your `results` folder as `[strain].[gene].blastp.out`.
 
