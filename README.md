@@ -43,7 +43,7 @@ Now let's see how related these genomes are! As a first pass we are going to use
 
 At its core, sourmash uses [k-mer](https://en.wikipedia.org/wiki/K-mer) sketches (based on the MinHash algorithm) to represent DNA, RNA, or protein sequences. Think of it a bit like creating a barcode (that is much smaller than the original dataset) that represents a subset of the data. By comparing the barcodes from different datasets we can rapidly estimate how similar the data are without having to work with the full sized datasets or run slower algorithms.
 
-The first step is to create sourmash sketches from each of our genomes. This is done with the `sketch` command. Here are details on how to use the `sketch` command: https://sourmash.readthedocs.io/en/latest/sourmash-sketch.html. You should write a for loop that will loop over each of the genome files and create a sketch that is scaled to 10000 for k=31. Output all files to a new directory called `sourmash` within the `genome_sequences` folder. Name them based on the original file name but add a `.sig` extension.
+The first step is to create sourmash sketches from eaßch of our genomes. This is done with the `sketch` command. Here are details on how to use the `sketch` command: https://sourmash.readthedocs.io/en/latest/sourmash-sketch.html. You should write a for loop that will loop over each of the genome files and create a sketch that is scaled to 1000 for k=31. Output all files to a new directory called `sourmash` within the `genome_sequences` folder. Name them based on the original file name but add a `.sig` extension.
 
 ```
 PASTE YOUR FOR LOOP HERE
