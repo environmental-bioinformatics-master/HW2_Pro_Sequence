@@ -7,7 +7,7 @@ In this assignment, you will explore the diversity of *Prochlorococcus* by compa
 First of all, start an `srun` session on the HPC. You shouldn't need a huge amount of memory (20Gb will more than suffice). Next, make a conda environment that has the tools we will be using:
 
 ```
-mamba create -c bioconda -c conda-forge -n homework2 sourmash>=4.0 blast hmmer fastani jupyterlab matplotlib seaborn pandas mummer
+mamba create -c bioconda -c conda-forge -n 2025-homework2 "sourmash-minimal>=4.0" blast hmmer fastani
 ```
 
 ## Part A. Preliminary: Getting genomic data from NCBI
