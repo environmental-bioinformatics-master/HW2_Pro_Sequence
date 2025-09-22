@@ -63,7 +63,7 @@ Move into the `sourmash/` folder and run the following commands to estimate the 
 # Estimate the ANI between samples
 sourmash compare *sig --ani --output sourmash.ani.k31.compare --csv  sourmash.ani.k31.compare.csv
 # Create a very rough plot
-sourmash plot ani.k31.compare --vmin .7  #try adjusting the vim value to see what happens
+sourmash plot sourmash.ani.k31.compare --vmin .7  #try adjusting the vim value to see what happens
 ```
 
 Copy `sourmash.ani.k31.compare.csv` and all your associated `.png` to `results/`.
