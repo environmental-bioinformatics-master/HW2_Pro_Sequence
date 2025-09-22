@@ -16,7 +16,7 @@ First, let's grab some genomes. Go to the genome browser from the NCBI: https://
 
 ![alt text](images/genome-filter.png)
 
-This should reduce the number of genomes to ~71. We don't need that many so let's just take genomes that were released between 2003 and 2007 and *earlier* (there should be 11). You can use the slider under the filter to narrow the date range. Select all of those entries and go up to the blue Download button and select "Download Package". We want to pull 1) the genome sequences, 2) the predicted proteins, and 3) the Annotation features (GFF) for each of our genomes. Futhermore select RefSeq only (or it will duplicate the download and download examples from both GeneBank and RefSeq). Provide a name (like `Prochlorococcus.zip`) for the download file.
+This should reduce the number of genomes to ~71. We don't need that many so let's just take genomes that were released between 2003 and 2007 and *earlier* (there should be 11). You can use the slider under the filter to narrow the date range. Select all of those entries and go up to the blue Download button and select "Download Package". We want to pull 1) the genome sequences, 2) the predicted proteins, and 3) the Annotation features (GFF) for each of our genomes. Futhermore select GenBank only (or it will duplicate the download and download examples from both GenBank and RefSeq). Provide a name (like `Prochlorococcus.zip`) for the download file.
 
 ![alt text](images/download.png)
 
