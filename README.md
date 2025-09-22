@@ -66,7 +66,7 @@ sourmash compare *sig --ani --output sourmash.ani.k31.compare --csv  sourmash.an
 sourmash plot sourmash.ani.k31.compare --vmin .7  #try adjusting the vim value to see what happens
 ```
 
-Copy `sourmash.ani.k31.compare.csv` and all your associated `.png` to `results/`.
+Create a `results/` folder at the top level of your homework directory. Copy `sourmash.ani.k31.compare.csv` and all your associated `.png` to `results/`.
 
 **What do you observe? What is the ANI between Pro and your outgroup? What is the range in ANI between Pro strains? How accurate do you think this is?**
 
